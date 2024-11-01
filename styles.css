@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -13,39 +14,44 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.login-container {
-    background: rgba(0, 0, 0, 0.6);
+.container {
+    background: rgba(255, 255, 255, 0.05);
     padding: 2rem;
     border-radius: 8px;
     width: 300px;
     position: relative;
+    backdrop-filter: blur(100px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.login-container::before {
+.container::before {
     content: '';
     position: absolute;
-    top: -50px;
-    left: -50px;
-    width: 200px;
-    height: 200px;
-    background: rgb(78, 145, 249);
+    top: -60px;
+    left: -60px;
+    width: 150px;
+    height: 150px;
+    background: rgb(12, 76, 172);
     border-radius: 50%;
     z-index: -1;
-    opacity: 0.8;
+    opacity: 0.6;
 }
 
-.login-container::after {
+
+.container::after {
     content: '';
     position: absolute;
-    bottom: -50px;
-    right: -50px;
-    width: 200px;
-    height: 200px;
-    background: rgb(249, 161, 78);
+    bottom: -60px;
+    right: -60px;
+    width: 150px;
+    height: 150px;
+    background: rgb(255, 82, 9);
     border-radius: 50%;
     z-index: -1;
-    opacity: 0.8;
+    opacity: 0.6;
 }
+
+
 
 .login-form {
     display: flex;
@@ -54,9 +60,9 @@ body {
     text-align: center;
 }
 
-.login-form h2 {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
+.login-form h1 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
 }
 
 .login-form label {
@@ -82,20 +88,25 @@ body {
     background-color: rgb(255, 255, 255);
     color: rgb(51, 51, 51);
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     transition: background 0.3s;
+}
+
+#password {
+    margin-bottom: 2.7rem;
 }
 
 .login-form button:hover {
     background-color: rgb(221, 221, 221);
 }
 
-.social-login {
+.social-logins {
     display: flex;
     justify-content: space-between;
 }
 
-.social-login .google, .social-login .facebook {
+.social-logins .google,
+.social-logins .facebook {
     width: 48%;
     padding: 0.5rem;
     border-radius: 4px;
@@ -104,12 +115,12 @@ body {
     font-weight: bold;
 }
 
-.social-login .google {
-    background-color: rgb(66, 133, 244);
+.social-logins .google {
+    background-color: rgba(255, 255, 255, 0.35);
     color: rgb(255, 255, 255);
 }
 
-.social-login .facebook {
-    background-color: rgb(59, 89, 152);
+.social-logins .facebook {
+    background-color: rgba(255, 255, 255, 0.35);
     color: rgb(255, 255, 255);
 }
